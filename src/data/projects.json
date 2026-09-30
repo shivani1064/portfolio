@@ -1,0 +1,57 @@
+[
+  {
+    "title": "CYBERVISOR-X",
+    "description": "AI-driven cybersecurity threat intelligence and access control system.",
+    "tags": [
+      "React.js",
+      "Node.js",
+      "Express",
+      "AI",
+      "RBAC",
+      "MITRE ATT&CK"
+    ],
+    "detailedDescription": "Developed an AI-based cybersecurity threat intelligence platform with a multi-agent architecture for real-time threat detection, risk analysis, and automated mitigation reporting.",
+    "features": [
+      "OTP-based authentication and role-based access control",
+      "MITRE ATT&CK-based threat classification and severity-level analysis",
+      "Interactive real-time dashboard for threat trends, risk scores, and system activities"
+    ]
+  },
+  {
+    "title": "WorkForce Insights",
+    "description": "AI-powered employee churn prediction using real HR datasets.",
+    "tags": [
+      "Python",
+      "Scikit-learn",
+      "Streamlit",
+      "Logistic Regression",
+      "Random Forest",
+      "XGBoost"
+    ],
+    "detailedDescription": "Developed an employee attrition prediction application using Python, Scikit-learn, and Streamlit. Trained Logistic Regression, Random Forest, and XGBoost models to identify employee attrition risks.",
+    "features": [
+      "Data upload through an interactive dashboard",
+      "Real-time employee attrition predictions",
+      "Visual insights for churn analysis"
+    ]
+  },
+  {
+    "title": "Online Voting System",
+    "description": "Secure web-based digital voting platform with an administration dashboard.",
+    "tags": [
+      "Django",
+      "Python",
+      "JavaScript",
+      "SQL",
+      "HTML",
+      "CSS"
+    ],
+    "detailedDescription": "Built a secure online voting platform with user authentication, role-based access, and an admin dashboard for managing 15+ polls.",
+    "features": [
+      "User authentication and role-based access",
+      "Admin dashboard managing 15+ polls",
+      "Optimized SQL schemas for secure and accurate vote storage",
+      "Responsive HTML/CSS interface for reliable, user-friendly voting"
+    ]
+  }
+]

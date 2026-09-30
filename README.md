@@ -26,15 +26,17 @@ git push origin main
 
 ## Publish with GitHub Pages
 
-After pushing to your own repository, run:
+Live site: [shivani1064.github.io/portfolio](https://shivani1064.github.io/portfolio/).
+
+After pushing source changes to `main`, publish the updated site with:
 
 ```sh
 npm run deploy
 ```
 
-This builds the site with the `/portfolio/` base path and publishes `dist` to the `gh-pages` branch. In your repository's **Settings > Pages**, select **Deploy from a branch**, then **gh-pages** and **/ (root)**. Your site will be available at `https://shivani1064.github.io/portfolio/` once GitHub finishes deployment.
+This builds the site with the `/portfolio/` base path and publishes `dist` to the `gh-pages` branch in `shivani1064/portfolio`. GitHub Pages uses **Deploy from a branch**, **gh-pages**, and **/ (root)**. The deployment includes `.nojekyll` to serve the Vite build directly. No custom domain or `CNAME` file is used. GitHub may take a few minutes to publish each update.
 
-If your repository has a different name, change `/portfolio/` in the `predeploy` script in `package.json` to match. For a `YOUR_USERNAME.github.io` repository or a custom domain, use `/` instead. The resume download and asset URLs use the configured base path.
+The base path is configured in `vite.config.js`; asset links and the resume download use it. Local development also opens at `/portfolio/`.
 
 On Windows PowerShell, use `npm.cmd` if the execution policy blocks `npm.ps1`.
 

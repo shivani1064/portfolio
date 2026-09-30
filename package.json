@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build -- --base=/portfolio/",
-    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist --nojekyll --repo https://github.com/shivani1064/portfolio.git",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

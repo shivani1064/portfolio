@@ -15,6 +15,6 @@ export default defineConfig(() => ({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  // Root hosting by default; the deploy script supplies the GitHub repository path.
-  base: '/'
+  // GitHub Pages hosts this repository at /portfolio/.
+  base: '/portfolio/'
 }));

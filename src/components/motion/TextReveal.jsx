@@ -36,8 +36,8 @@ const TextReveal = ({
       >
         {words.map((w, i) => (
           <Fragment key={i}>
-            <span className="inline-block overflow-hidden align-bottom pb-[0.1em] -mb-[0.1em]">
-              <motion.span className="inline-block will-change-transform" variants={word}>
+            <span className="inline-block max-w-full overflow-hidden align-bottom pb-[0.1em] -mb-[0.1em]">
+              <motion.span className="inline-block max-w-full break-words will-change-transform" variants={word}>
                 {w}
               </motion.span>
             </span>

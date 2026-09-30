@@ -19,7 +19,7 @@ const Footer = () => {
 
   return (
     <>
-      <AnimatePresence>{showTop && <motion.button initial={{ opacity: 0, scale: .7 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: .7 }} whileHover={{ y: -4 }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="fixed bottom-5 right-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-foreground text-background shadow-md" aria-label="Back to top"><ArrowUp className="h-4 w-4" /></motion.button>}</AnimatePresence>
+      <AnimatePresence>{showTop && <motion.button initial={{ opacity: 0, scale: .7 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: .7 }} whileHover={{ y: -4 }} onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })} className="fixed bottom-5 right-5 z-40 grid h-12 w-12 place-items-center rounded-full bg-foreground text-background shadow-md" aria-label="Back to top"><ArrowUp className="h-4 w-4" /></motion.button>}</AnimatePresence>
       <footer className="site-container py-12 sm:py-16">
         <div className="px-2 sm:px-4">
           <div className="flex items-center justify-center gap-3">
@@ -38,7 +38,7 @@ const Footer = () => {
             ))}
           </div>
           <div className="mt-3 border-t border-border pt-6 text-center text-xs text-muted-foreground">
-            <p>© {new Date().getFullYear()} Shivani Reddy Katta <span className="mx-2" aria-hidden="true"></span></p>
+            <p>© {new Date().getFullYear()} Shivani Reddy Katta</p>
           </div>
         </div>
       </footer>

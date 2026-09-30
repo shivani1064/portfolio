@@ -78,7 +78,7 @@ const Hero = ({ start = true }) => {
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+    if (element) element.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth' });
   };
 
   return (
@@ -86,7 +86,7 @@ const Hero = ({ start = true }) => {
       id="home"
       ref={sectionRef}
       onMouseMove={handleMouseMove}
-      className="legacy-hero relative min-h-screen flex items-center justify-center bg-background pt-16 pb-20 sm:pt-8 sm:pb-4 overflow-hidden"
+      className="legacy-hero relative min-h-[100svh] flex items-center justify-center bg-background pt-28 pb-24 sm:pt-32 sm:pb-28 overflow-hidden"
     >
       {/* Ambient glow + dot grid, with a cursor-following spotlight layer */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -166,7 +166,7 @@ const Hero = ({ start = true }) => {
             ))}
           </motion.div>
 
-          <motion.a variants={item} href={`${import.meta.env.BASE_URL}shivanikatta_Resume.pdf`} download className="mt-6 text-sm font-medium text-accent underline underline-offset-4">Download resume</motion.a>
+          <motion.a variants={item} href={`${import.meta.env.BASE_URL}shivanikatta_Resume.pdf`} download className="mt-4 inline-flex min-h-11 items-center rounded px-2 text-sm font-medium text-accent underline underline-offset-4 transition-opacity hover:opacity-80">Download resume</motion.a>
         </motion.div>
       </div>
 

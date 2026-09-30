@@ -40,13 +40,14 @@ const Index = () => {
       <AnimatePresence>{!introDone && <Preloader />}</AnimatePresence>
       <ScrollProgress />
       <Header />
-      <main>
+      <a href="#main-content" className="skip-link">Skip to content</a>
+      <main id="main-content" tabIndex={-1}>
         <Hero start={introDone} />
         <Skills />
         <About />
         <Education />
-        <Activities />
         <Projects />
+        <Activities />
         <Contact />
       </main>
       <Footer />

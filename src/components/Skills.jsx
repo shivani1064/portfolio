@@ -10,7 +10,7 @@ const skills = [
   { title: 'Databases', icon: Database, accent: 'from-emerald-400 to-cyan-500', technologies: ['MySQL', 'SQLite', 'MongoDB'] },
   { title: 'DevOps', icon: Cloud, accent: 'from-sky-500 to-violet-500', technologies: ['Git / GitHub', 'Docker', 'Jenkins', 'CI/CD Pipelines', 'Linux Fundamentals'] },
   { title: 'Systems & Cloud Foundations', icon: ShieldCheck, accent: 'from-amber-400 to-rose-500', technologies: ['AWS / Cloud Concepts', 'Networking', 'System Troubleshooting', 'Secure Application Environments'] },
-  { title: 'Academic Coursework', icon: Sparkles, accent: 'from-violet-500 to-fuchsia-500', technologies: ['Data Structures', 'Operating Systems (Windows, Unix/Linux)', 'OOP', 'DBMS'] },
+  { title: 'Academic Coursework', icon: Sparkles, accent: 'from-violet-500 to-fuchsia-500', technologies: ['Data Structures', 'Operating Systems', 'OOP', 'DBMS'] },
 ];
 
 const Skills = () => (
@@ -35,12 +35,12 @@ const Skills = () => (
           variants={{ hidden: { opacity: 0, y: 26 }, show: { opacity: 1, y: 0, transition: { duration: .65, ease: EASE } } }}
           whileHover={{ y: -6 }}
           transition={{ type: 'spring', stiffness: 280, damping: 24 }}
-          className={`group relative min-h-[300px] overflow-hidden rounded-[28px] border border-border/70 bg-surface-2 p-6 shadow-sm sm:p-8 ${index === 0 || index === 5 ? 'xl:col-span-1' : ''}`}
+          className={`group relative overflow-hidden rounded-[28px] border border-border/70 bg-surface-2 p-6 shadow-sm sm:p-8 ${index === 0 || index === 5 ? 'xl:col-span-1' : ''}`}
         >
           <div className={`mb-8 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br ${accent} text-white shadow-lg transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110`}>
             <Icon className="h-5 w-5" />
           </div>
-          <h3 className="font-display text-2xl font-semibold tracking-tight">{title}</h3>
+          <h3 className="font-display text-title">{title}</h3>
           <div className="mt-6 flex flex-wrap gap-x-3 gap-y-2.5">
             {technologies.map((tech) => (
               <span key={tech} className="rounded-full border border-border/80 bg-background/60 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors group-hover:border-accent/20 group-hover:text-foreground">

@@ -59,7 +59,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 88px;
+    scroll-padding-top: 112px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -167,4 +167,10 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+
+.skip-link { position: fixed; top: 8px; left: 16px; z-index: 150; transform: translateY(-160%); padding: 12px 20px; border-radius: 12px; background: hsl(var(--background)); color: hsl(var(--foreground)); }
+.skip-link:focus { transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; }
 }
